@@ -9,42 +9,52 @@
 
 A modern, responsive movie discovery web application that allows users to search for movies, view popular releases, and discover trending films using The Movie Database (TMDB) API.
 
-## ✨ Live Demo
+---
 
-🔴 **Live Application:** [movie-app-blue-kappa.vercel.app](https://movie-app-blue-kappa.vercel.app/)
+## 🌐 Live Demo
+
+**Live Application:** [movie-app-blue-kappa.vercel.app](https://movie-app-blue-kappa.vercel.app/)
+
+---
 
 ## 📸 Screenshots
 
 | Homepage | Search Results |
 |----------|----------------|
-| ![Homepage Screenshot](./public/home.png) | ![Search Screenshot](./public/search.png) |
+| ![Homepage Screenshot](./screenshots/homepage.png) | ![Search Screenshot](./screenshots/search.png) |
 
 *Add your screenshots in the `screenshots` folder*
+
+---
 
 ## ✨ Features
 
 | Feature | Status |
 |---------|--------|
-| 🔍 Search movies by title | ✅ Complete |
-| 🎬 View popular movies | ✅ Complete |
-| 📈 Trending movies section | ✅ Complete |
-| ⏳ Loading state with spinner | ✅ Complete |
-| ❌ Error handling with user messages | ✅ Complete |
-| 📱 Fully responsive design | ✅ Complete |
-| 🎯 Debounced search (reduces API calls) | ✅ Complete |
-| 📊 Appwrite analytics integration | ✅ Complete |
-| 🎞️ Movie details page | 🔜 Coming soon |
+| Search movies by title | ✅ Complete |
+| View popular movies | ✅ Complete |
+| Trending movies section | ✅ Complete |
+| Loading state with spinner | ✅ Complete |
+| Error handling with user messages | ✅ Complete |
+| Fully responsive design | ✅ Complete |
+| Debounced search (reduces API calls) | ✅ Complete |
+| Appwrite analytics integration | ✅ Complete |
+| Movie details page | 🔜 Coming soon |
+
+---
 
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
-| **React 19** | Frontend framework |
-| **Vite** | Build tool and dev server |
-| **Tailwind CSS** | Styling and responsive design |
-| **TMDB API** | Movie data source |
-| **Appwrite** | Backend for trending movies analytics |
-| **Vercel** | Hosting and deployment |
+| React 19 | Frontend framework |
+| Vite | Build tool and dev server |
+| Tailwind CSS | Styling and responsive design |
+| TMDB API | Movie data source |
+| Appwrite | Backend for trending movies analytics |
+| Vercel | Hosting and deployment |
+
+---
 
 ## 📁 Project Structure
 
@@ -67,105 +77,119 @@ movie-app/
 ├── index.html
 ├── package.json
 ├── README.md
-└── screenshots/
-    ├── homepage.png
-    └── search.png
 ```
 
-*Add your actual project structure above*
+---
 
 ## 🏃‍♂️ Run Locally
 
-### Prerequisites
-
+**Prerequisites**
 - Node.js (v18 or higher)
 - npm or yarn
 - TMDB API key
 - Appwrite project (optional)
 
-### Installation Steps
+**Installation Steps**
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Bereket-Ketema/Movie-app.git
-   cd Movie-app
-   ```
+1. Clone the repository
+```
+git clone https://github.com/Bereket-Ketema/Movie-app.git
+cd Movie-app
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+2. Install dependencies
+```
+npm install
+```
 
-3. **Create environment variables**
-   
-   ```
+3. Create environment variables
+Create a `.env` file in the root directory:
+```
+VITE_TMDB=your_tmdb_bearer_token_here
+VITE_APPWRITE_ENDPOINT=your_appwrite_endpoint
+VITE_APPWRITE_PROJECT_ID=your_project_id
+```
 
-4. **Start development server**
-   ```bash
-   npm run dev
-   ```
+4. Start development server
+```
+npm run dev
+```
 
-5. **Build for production**
-   ```bash
-   npm run build
-   ```
+5. Build for production
+```
+npm run build
+```
+
+---
 
 ## 🔧 Environment Variables
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `VITE_TMDB` | ✅ Yes | TMDB API Bearer Token |
-| `VITE_APPWRITE_ENDPOINT` | ❌ No | Appwrite endpoint (for trending) |
-| `VITE_APPWRITE_PROJECT_ID` | ❌ No | Appwrite project ID |
+| VITE_TMDB | Yes | TMDB API Bearer Token |
+| VITE_APPWRITE_ENDPOINT | No | Appwrite endpoint (for trending) |
+| VITE_APPWRITE_PROJECT_ID | No | Appwrite project ID |
+
+---
 
 ## 📚 What I Learned
 
 - **API Integration** - Fetching data from external APIs, handling responses, and managing API keys securely
-- **React Hooks** - `useState`, `useEffect`, and creating custom hooks like `useDebounce`
+- **React Hooks** - useState, useEffect, and creating custom hooks like useDebounce
 - **Debouncing** - Limiting API calls to improve performance and respect rate limits
 - **Component Architecture** - Breaking UI into reusable, maintainable components
 - **Error Handling** - Graceful error handling with user-friendly messages
-- **Environment Variables** - Securing sensitive data in `.env` files
+- **Environment Variables** - Securing sensitive data in .env files
 - **Deployment** - Deploying to Vercel and configuring environment variables
 - **Backend Integration** - Using Appwrite for data persistence
+
+---
 
 ## 🐛 Challenges Faced & Solutions
 
 | Challenge | Solution |
 |-----------|----------|
-| API key exposure | Used environment variables with `VITE_` prefix |
-| Too many API calls on every keystroke | Implemented custom `useDebounce` hook (1 second delay) |
-| `react-use` package incompatible with React 19 | Created custom debounce hook instead of external dependency |
+| API key exposure | Used environment variables with VITE_ prefix |
+| Too many API calls on every keystroke | Implemented custom useDebounce hook (1 second delay) |
+| react-use package incompatible with React 19 | Created custom debounce hook instead of external dependency |
 | 401 Unauthorized error | Fixed API key variable naming |
-| Build failing on Vercel | Added `.npmrc` with `legacy-peer-deps=true` |
-| 404 on page refresh | Added `vercel.json` with rewrite rules |
+| Build failing on Vercel | Added .npmrc with legacy-peer-deps=true |
+| 404 on page refresh | Added vercel.json with rewrite rules |
+
+---
 
 ## 📈 Future Improvements
 
-- [ ] **Movie Details Page** - Click on any movie to see detailed information
-- [ ] **Pagination** - Load more movies instead of infinite scroll
-- [ ] **User Authentication** - Sign up/login with Appwrite
-- [ ] **Watchlist** - Save favorite movies to watch later
-- [ ] **Movie Trailers** - Embed YouTube trailers for each movie
-- [ ] **Advanced Filters** - Filter by genre, year, rating
-- [ ] **Dark/Light Mode** - Theme toggle
-- [ ] **Performance Optimization** - Implement `React.memo` and lazy loading
-- [ ] **Unit Tests** - Add testing with Vitest or Jest
+- Movie Details Page - Click on any movie to see detailed information
+- Pagination - Load more movies instead of infinite scroll
+- User Authentication - Sign up/login with Appwrite
+- Watchlist - Save favorite movies to watch later
+- Movie Trailers - Embed YouTube trailers for each movie
+- Advanced Filters - Filter by genre, year, rating
+- Dark/Light Mode - Theme toggle
+- Performance Optimization - Implement React.memo and lazy loading
+- Unit Tests - Add testing with Vitest or Jest
+
+---
 
 ## 🎯 Goal
 
-The ultimate goal is to make this app **fully competitive with Netflix** - a complete movie streaming experience with user accounts, watchlists, recommendations, and more.
+The ultimate goal is to make this app fully competitive with Netflix - a complete movie streaming experience with user accounts, watchlists, recommendations, and more.
+
+---
 
 ## 🙏 Acknowledgments
 
-- [TMDB](https://www.themoviedb.org/) for providing the movie database API
-- [Appwrite](https://appwrite.io/) for backend services
-- [Vercel](https://vercel.com/) for hosting
+- TMDB for providing the movie database API
+- Appwrite for backend services
+- Vercel for hosting
 - React community for excellent documentation
+
+---
 
 ## 📝 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the MIT License.
 
 ---
 
@@ -173,7 +197,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Bereket Ketema**
 
-- GitHub: [@Bereket-Ketema](https://github.com/Bereket-Ketema)
+GitHub: [@Bereket-Ketema](https://github.com/Bereket-Ketema)
 
 ---
 
