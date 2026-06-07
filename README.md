@@ -16,9 +16,9 @@ A modern, responsive movie discovery web application that allows users to search
 
 ## 📸 Screenshots
 
-
-![Homepage](./public/home.png)
-![Search Results](./public/search.png) |
+| Homepage | Search Results |
+|----------|----------------|
+| ![Homepage](./public/home.png) | ![Search Results](./public/search.png) |
 
 
 ---
