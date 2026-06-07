@@ -13,13 +13,12 @@ A modern, responsive movie discovery web application that allows users to search
 
 ---
 
-## 📸 Screenshots
 
 ## 📸 Screenshots
 
-| Homepage | Search Results |
-|----------|----------------|
-| ![Homepage](./public/home.png) | ![Search Results](./public/search.png) |
+
+![Homepage](./public/home.png)
+![Search Results](./public/search.png) |
 
 
 ---
